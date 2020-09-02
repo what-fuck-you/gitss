@@ -26,10 +26,17 @@
                 </div>
           <div class="dia71">
 
-            <div style="width: 6.67rem;height: 50%" v-for="(a,b) in datea.buySelect"  :key="b">
-              <p style="font-size: .3rem;text-align: left">{{a.name}}</p>
+            <div style="width: 6.67rem;height: 50%"   >
+              <p style="font-size: .3rem;text-align: left" >{{datea.buySelect[0].name}}</p>
               <div class="dian54247">
-                    <span class="opw" v-for="(v,aw) in a.list">{{v}}</span>
+                    <span class="opw"  v-for="(v,aw) in datea.buySelect[0].list" :key="aw"  :class="{ions:aw===z}" @click="sdsad(aw)">{{v}}</span>
+              </div>
+            </div>
+
+            <div style="width: 6.67rem;height: 50%"   >
+              <p style="font-size: .3rem;text-align: left" >{{datea.buySelect[1].name}}</p>
+              <div class="dian54247">
+                <span class="opw"   v-for="(v,aw) in datea.buySelect[1].list" :key="aw"  :class="{ions:aw===g}" @click="sdsadsds(aw)">{{v}}</span>
               </div>
             </div>
 <!--            <div style="width: 6.67rem;height: 50%">-->
@@ -131,10 +138,18 @@
           sz:"",
           sw1:"",
           szhi:"00001",
-          shuzhi:1
+          shuzhi:1,
+          z:0,
+          g:0
         }
        },
       methods:{
+        sdsad(b){
+          this.z=b
+        },
+        sdsadsds(i){
+          this.g=i
+        },
         nta(){
           this.$router.push({
             path:'/indexa',
@@ -234,6 +249,7 @@
 <style scoped>
   @import url("../../../node_modules/swiper/css/swiper.min.css");
 
+.huansdgsa{background:#ff9900;color: #ffffff}
 .dingdun{width: 7.5rem;height: .4rem;background: #ff9900;position: fixed;top:0;left: 0;z-index: 999}
 .dingdun11{width: 7.5rem;height: .4rem;background: #ff9900;z-index: 999}
   .widj{width: 7.54rem;height: 5.44rem;position: relative}
@@ -285,7 +301,8 @@ background-size: 100% 100%;float: right}
 .dian54247{
   width:6rem;height: .97rem;
 }
-.opw{ font-size: .3rem;background: #dddddd;padding: 0.1rem .46rem;display: block;float: left;margin-top: .2rem;margin-left: .2rem;
+.dian54247 .ions{background:#ff9900;color: #ffffff }
+.opw{ background: #dddddd; font-size: .3rem;;padding: 0.1rem .46rem;display: block;float: left;margin-top: .2rem;margin-left: .2rem;
 border-radius:.1rem }
   /*样式*/
   html, body {

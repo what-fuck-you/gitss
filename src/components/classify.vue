@@ -23,7 +23,7 @@
             <router-link to="/classify4" active-class="wid" class="sdo">食品营养</router-link>
           </div>
           <div class="opm">
-            <router-link to="/classify5" active-class="wid" class="sdo">全球直邮</router-link>
+            <router-link to="/classify5" active-class="widaaaaaa" class="sdo">全球直邮</router-link>
           </div>
 
             <router-view style="position: absolute;top:0;left:2.37rem "></router-view>
@@ -44,7 +44,7 @@
         this.$http({
           url:"http://yd.msword.top/getClassify",
         }).then((res)=>{
-          console.log(res.data);
+          // console.log(res.data);
 
         })
       }
@@ -65,5 +65,6 @@
   .sdo{display: block;width: 2.37rem;height: .95rem;font-size: .28rem;background: #fafafa;line-height: .95rem
   ;text-decoration: none;color: #333333;}
   .wid{background: #ffffff;color: #ff9900;width: 2.27rem;margin-left:0.1rem  }
+  .widaaaaaa{background: #ffffff;color: #ff9900;width: 2.27rem;margin-left:0.1rem  }
   .opm{width: 2.37rem;height: .95rem;background: #1d84a7}
 </style>

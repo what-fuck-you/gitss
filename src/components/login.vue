@@ -67,17 +67,17 @@ export default {
                     phone: this.phone,
                     password: this.password
                 }}).then(res=>{
-                    console.log(res)
+                    // console.log(res)
                     if(res.data.status==1){
                         alert('登陆成功');
                         let obj = {
                             url:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570733282035&di=feabe7dbea98787ccbd63eddcc55ddb4&imgtype=0&src=http%3A%2F%2Fwx4.sinaimg.cn%2Flarge%2Fceeb653ely1fvst9d95rej20h20hsgyk.jpg',
-                            name:'你是沙雕吗？',
+                            name:'111111',
                             phone:this.phone,
                             password:this.password,
                         }
                         sessionStorage.setItem('arr',JSON.stringify(obj));
-                        _this.$router.push({path:'/me'})
+                        _this.$router.push({path:'/my'})
                     }else{
                         alert('输入正确的账号密码')
                     }

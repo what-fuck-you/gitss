@@ -92,7 +92,7 @@
             this.$http({
               url:"http://yd.msword.top/getIndexData",
             }).then((res)=>{
-              console.log(res.data.data);
+              // console.log(res.data.data);
               this.imgw=res.data.data.splice(0,1)
               this.imgw2=res.data.data.splice(0,5)
             })

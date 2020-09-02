@@ -2,7 +2,7 @@
     <div class="div1">
 
       <div class="soe" style="position: relative" v-for="(item,index) in dta" :key="index">
-     <img :src="item.thumbnail" class="imdd">
+     <img :src="item.thubmnail" class="imdd">
 
           <p style="font-size: .23rem;color: #ffffff;position: absolute;bottom: .12rem;left: .8rem">{{item.name}}</p>
 
